@@ -640,7 +640,38 @@ tr:hover td {
     background-color: #f6f9fc;
 }
 
+@media (max-width:480px) {
 
+    .table_header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .branches_to_booking {
+        margin-top: 20px;
+    }
+
+    .table_content {
+        height: auto;
+    }
+
+    table {
+        min-width: auto;
+    }
+
+    th,td {
+        padding: 8px 10px;
+        font-size: 14px;
+        text-align: left;
+    }
+
+    td iframe {
+        height: 130px;
+        width: 70px;
+    }
+
+}
 
 /* Booking page */
 
@@ -774,9 +805,11 @@ form p {
     border-radius: 20px;
 }
 
-.type_row button {
-    margin: auto;
-    margin-top: 10px;
+.type_row p {
+    padding-bottom: 25px;
+}
+
+.menu_button {
     padding: 10px 20px;
     background-color: #fff3f3;
     color: rgb(0, 40, 80);
@@ -784,12 +817,13 @@ form p {
     transition:  0.2s ease-in-out;
     border: 3px solid rgb(0, 40, 80);
     border-radius: 50px;
+    text-decoration: none;
 }
 
-.type_row button:hover {
+.menu_button:hover {
     background-color: rgb(0, 40, 80);
     color: #fff3f3;
-    border-color: #fff3f3;
+    border-color: rgb(0, 40, 80);
 }
 
 
