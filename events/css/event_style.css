@@ -1,0 +1,646 @@
+*{
+    margin:0 ;
+    padding: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Weddings Page */
+
+nav {
+    padding: 2% 6%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+ 
+.nav_li{
+    text-align:right;
+    flex: 10 ;
+}
+ 
+nav img{
+    width: 150px;
+    height: 50px;
+    transition: 0.3;
+}
+
+nav img:hover {
+    transform: scale(1,0.9);
+ 
+}
+ 
+.nav_li ul li {
+    list-style: none;
+    position: relative;
+    padding: 8px 10px;
+    display: inline-block;
+}
+ 
+.nav_li ul li a {
+    color: rgb(67, 0, 80);
+    text-decoration: none;
+    font-size: 17px;
+}
+ 
+.nav_li ul li::after{
+    transition: 0.8s;
+    content: "";
+    width: 0%;
+    height: 2px;
+    display: block;
+    margin: auto;  
+    background-color: rgb(67, 0, 80);
+}
+ 
+ 
+.nav_li ul li:hover::after {
+    width: 100%;
+    color: rgb(67, 0, 80);
+}
+ 
+
+.banner{
+    height: 65vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(148, 161, 172, 0.7), rgba(148, 161, 172, 0.7)), url(../images/wedding_banner.jpg) ;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: rgb(67, 0, 80) ;
+}
+
+.banner h1{
+    margin-top: 100px;
+    font-size: 40px;
+}
+
+/* Mobile Menu Wedding and Conf Page */
+
+@media (max-width:480px) {
+
+    .nav li ,  .conf_nav_li{
+        padding: 20px;
+        text-align: center;
+            
+        }
+    
+    .nav_li ul li, .conf_nav_li ul li {
+        text-align: center;
+        display: block;
+        margin: 0;
+        padding-top: 50px ;
+        padding: 8px 0;
+        border-bottom: 1px solid #fff3f3;
+        }
+    
+    nav img {
+        display: none;
+    }
+    
+    .bannertext {
+        margin-top: 50px;
+    }
+    
+}
+
+/* Wedding page footer*/
+
+footer{
+    background-color:rgb(67, 0, 80); 
+    color: whitesmoke;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footercontent {
+    max-width: fit-content;
+    margin: 0 auto;
+}
+
+.footercontent p{
+    margin: 0;
+    font-size: 14;
+    font-family: sans-serif;
+}
+
+.footernav{
+    margin: 30px 0;
+    flex: 1;
+}
+
+.footernav ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.footernav ul li a{
+    text-decoration: none;
+    color: whitesmoke;
+    margin: 10px;
+    opacity: 0.6;
+    transition: 0.3s;
+    font-family: sans-serif;
+}
+
+.footernav ul li a:hover {
+    opacity: 1.3;
+}
+
+.footerspan {
+    font-style: italic;
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+}
+.icons a {
+    padding: 20px;
+    border-radius: 30% ;
+}
+
+.icons a i{
+    font-size: 1.5em;
+}
+
+.icons a:hover{
+    background-color: white;
+    transition: 1s;
+}
+
+.icons a i:hover{
+    color: rgb(67, 0, 80);
+    transition: 1s;
+}
+
+/* Wedding info section*/
+
+.wedding_info{
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding-bottom: 50px;
+    padding-top: 80px;
+    border: 3px solid rgb(67, 0, 80);
+    box-shadow: 10px 20px 10px rgba(0, 0, 0, .1);
+    border-radius: 10px;
+}
+
+.wedrow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wedcol {
+    flex-basis: 48%;
+    padding: 30px ;
+}
+
+.wedcol img{
+    width: 100% ;
+    max-width: 600px;
+    border-radius: 10px;
+    border: 2px solid rgb(67, 0, 80);
+    transition: 0.3s ease;
+}
+
+.wedcol img:hover{
+    box-shadow: 10px 20px 10px rgb(239, 215, 244);
+    transform: scale(1.05);
+}
+
+.wedcol h1{
+    color: rgb(67, 0, 80);
+    padding-top: 0;
+}
+
+.wedcol p{
+    color: rgb(67, 0, 80);
+    padding: 15px 0 25px;
+    text-align: left;
+}
+
+.wed_btn {
+    background-color: #fff3f3;
+    color: rgb(67, 0, 80);
+    cursor: pointer;
+    font-size: 15px;
+    border: 3px solid rgb(67, 0, 80);
+    border-radius: 100px;
+    padding: 10px 100px;
+    margin-top: 30px;
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+}
+    
+.wed_btn:hover {
+    background-color: rgb(67, 0, 80);
+    color: #fff3f3;
+    box-shadow: 10px 20px 10px rgba(0, 0, 0, .07);
+}
+    
+@media(max-width:480px){
+    .wedding_info {
+    width: 90%;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    padding-top: 60px;
+    }
+
+    .wedrow {
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .wedcol {
+    text-align: center;
+    }
+
+
+}
+
+/* Sayings weddings */
+
+.saying {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    color : rgb(67, 0, 80);
+}
+
+.saying h1,p {
+    margin-bottom: 15px;
+}
+
+.sayingrow   {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sayingcol {
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background-color: rgb(239, 215, 244);
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+    transition: boxshadow;
+}
+
+.sayingcol:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}
+
+.sayingcol h3, p {
+    text-align: center;
+}
+
+.sayingcol p {
+    font-style: italic;
+}
+
+.sayingcol img {
+    height: 120px;
+    margin-left:5px;
+    margin-right: 30px;
+    border-radius: 10%;
+    border : 1px solid rgb(67, 0, 80)
+}
+
+@media (max-width:480px){
+    .saying {
+        width: 90%;
+    }
+
+    .sayingrow{
+        flex-direction: column;
+    }
+
+    .sayingcol {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+
+    .sayingcol img {
+        height: 60px;
+    }
+}
+
+/* conference page*/
+
+
+nav {
+    padding: 2% 6%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+ 
+.conf_nav_li{
+    text-align:right;
+    flex: 10 ;
+}
+ 
+nav img{
+    width: 150px;
+    height: 50px;
+    transition: 0.3;
+}
+
+nav img:hover {
+    transform: scale(1,0.9);
+ 
+}
+ 
+.conf_nav_li ul li {
+    list-style: none;
+    position: relative;
+    padding: 8px 10px;
+    display: inline-block;
+}
+
+ 
+.conf_nav_li ul li a {
+    color: #17afba	;
+    text-decoration: none;
+    font-size: 17px;
+}
+ 
+.conf_nav_li ul li::after{
+    transition: 0.8s;
+    content: "";
+    width: 0%;
+    height: 2px;
+    display: block;
+    margin: auto;  
+    background-color: #17afba	;
+}
+ 
+ 
+.conf_nav_li ul li:hover::after {
+    width: 100%;
+    color:#17afba	;
+}
+ 
+
+.banner_conf {
+    height: 65vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(42, 47, 49, 0.7), rgba(148, 161, 172, 0.7)), url(../images/conference_banner.webp) ;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #17afba	 ;
+}
+
+.banner_conf     h1{
+    margin-top: 100px;
+    font-size: 40px;
+}
+
+
+/* Conference page footer*/
+
+.conf_footer{
+    background-color:#17afba; 
+    color: whitesmoke;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footercontent {
+    max-width: fit-content;
+    margin: 0 auto;
+}
+
+.footercontent p{
+    margin: 0;
+    font-size: 14;
+    font-family: sans-serif;
+}
+
+.footernav{
+    margin: 30px 0;
+    flex: 1;
+}
+
+.footernav ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.footernav ul li a{
+    text-decoration: none;
+    color: whitesmoke;
+    margin: 10px;
+    opacity: 0.6;
+    transition: 0.3s;
+    font-family: sans-serif;
+}
+
+.footernav ul li a:hover {
+    opacity: 1.3;
+}
+
+.footerspan {
+    font-style: italic;
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+}
+.icons a {
+    padding: 20px;
+    border-radius: 30% ;
+}
+
+.icons a i{
+    font-size: 1.5em;
+}
+
+.icons a:hover{
+    background-color: white;
+    transition: 1s;
+}
+
+.icons a i:hover{
+    color: #17afba;
+    transition: 1s;
+}
+
+/* Conf info section*/
+
+.conf_info{
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding-bottom: 50px;
+    padding-top: 80px;
+    border: 3px solid #17afba;
+    box-shadow: 10px 20px 10px rgba(0, 0, 0, .1);
+    border-radius: 10px;
+}
+
+.confrow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.confcol {
+    flex-basis: 48%;
+    padding: 30px ;
+}
+
+.confcol img{
+    width: 100% ;
+    max-width: 600px;
+    border-radius: 10px;
+    border: 2px solid#17afba;
+    transition: 0.3s ease;
+}
+
+.confcol img:hover{
+    box-shadow: 10px 20px 10px #d0f1f4;
+    transform: scale(1.05);
+}
+
+.confcol h1{
+    color: #17afba;
+    padding-top: 0;
+}
+
+.confcol p{
+    color: #17afba;
+    padding: 15px 0 25px;
+    text-align: left;
+}
+
+.conf_btn {
+    background-color: #fff3f3;
+    color:#17afba;
+    cursor: pointer;
+    font-size: 15px;
+    border: 3px solid #17afba;
+    border-radius: 100px;
+    padding: 10px 100px;
+    margin-top: 30px;
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+}
+    
+.conf_btn:hover {
+    background-color: #17afba;
+    color: #fff3f3;
+    box-shadow: 10px 20px 10px rgba(0, 0, 0, .07);
+}
+    
+@media(max-width:480px){
+    .conf_info {
+    width: 90%;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    padding-top: 60px;
+    }
+
+    .confrow {
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .confcol {
+    text-align: center;
+    }
+
+
+}
+
+/* Sayings Conferences */
+
+.conf_saying {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    color : #17afba;
+}
+
+.conf_saying h1,p {
+    margin-bottom: 15px;
+}
+
+.conf_saying p {
+    font-style: italic;
+}
+
+.conf_sayingrow   {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.conf_sayingcol {
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background-color: rgb(222, 231, 238);
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+    transition: boxshadow;
+}
+
+.conf_sayingcol:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}
+
+.conf_sayingcol h3, p {
+    text-align: center;
+}
+.conf_sayingcol img {
+    height: 120px;
+    margin-left:5px;
+    margin-right: 30px;
+    border-radius: 10%;
+    border: 1px solid #17afba ;
+
+}
+
+@media (max-width:480px){
+    .conf_saying {
+        width: 90%;
+    }
+
+    .conf_sayingrow{
+        flex-direction: column;
+    }
+
+    .conf_sayingcol {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+
+    .conf_sayingcol img {
+        height: 60px;
+    }
+}
+
