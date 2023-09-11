@@ -400,6 +400,7 @@ Adventures section */
 }
 
 @media (max-width:480px) {
+    
     .adventures_col {
         flex-basis: 100%;
     }
@@ -456,17 +457,17 @@ Adventures section */
 
 @media( max-width: 480px) {
     .map_flexbox{
-        flex-direction: column;
         align-items:center ;
+        flex-direction: column;
     }
 
     .mapcol {
-        flex: auto;
         width: fit-content;
+        flex: auto;
     }
 
     .maps iframe {
-        height: 200px;
+        height: 150px;
     }
 
 }
@@ -503,7 +504,6 @@ Adventures section */
     border-radius: 10px;
     margin-bottom: 30px;
     position: relative;
-    overflow: hidden;
     display: flex;
 }
 
