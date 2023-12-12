@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="css/style.css">
         <script src="https://kit.fontawesome.com/df99a6def2.js" crossorigin="anonymous"></script>
         <link rel="icon" href="images/icon.png">
+        <script src="main.js" defer></script>
     </head>
 
 <!--Banner-->
@@ -35,57 +36,82 @@
             <div class="container_time">
                 <h2 class="heading"> Hotel Booking </h2>
                 <h3 class="sub_heading"> Single/Double </h3>
-                <p> Single room starting at 100$ upwards</p>
-                <P> Double room starting at 150$ upwards</p>
-                <h3 class="sub_heading"> Deluce/Suite </h3>
-                <p> Suite starting at 200$ upwards</p>
-                <P> Deluxe Suite starting at 200$ upwards</p>
+                <p> Single room starting at 25,000 </p>
+                <P> Double room starting at 35,000</p>
+                <p> Triple room starting at 40,000</p>
+                <h3 class="sub_heading"> Additional Information </h3>
+                <p> For Kids above 5 years there will be an extra 5000 meal charge. </p>
+                <p> An extra bed may be added for 8000</p>
                 <hr>
                 <h4 class="heading_phone"> Call Us For Further Information on (011)234567</h4>
             </div>
             <div class="container_form">
-                <form>
+                <form id="bookform">
                     <h2 class="form_heading"> Hotel Reservation</h2>
                     <div class="form_field">
                         <p> Name </p>
-                        <input type="text" placeholder="Enter Your Name">
+                        <input type="text" placeholder="Enter Your Name" id="name" >
                     </div>
                     <div class="form_field">
                         <p> Email </p>
-                        <input type="email" placeholder="Enter Your Email">
+                        <input type="email" placeholder="Enter Your Email" id="email" >
                     </div>
                     <div class="form_field">
                         <p> Arrival Date </p>
-                        <input type="date">
+                        <input type="date" id="arrivalDate" >
                     </div>
                     <div class="form_field">
-                        <p> Depature Date </p>
-                        <input type="date">
+                        <p> Depature Date  </p>
+                        <input type="date" id="departureDate" >
                     </div>
                     <div class="form_field">
-                        <p> Arrvial Time </p>
-                        <input type="time">
+                        <p>Children below 5  </p>
+                        <input type="number" min="0" id="childBelow5" placeholder=" Enter amount required">
                     </div>
                     <div class="form_field">
-                        <p>  Room Type  </p>
-                        <select name="select" id="#">
-                            <option value="1">  Single Room  </option>
-                            <option value="2"> Double Room </option>
-                            <option value="3"> Suite</option>
-                            <option value="4"> Deluxe Suite</option>
+                        <p>Children above 5  </p>
+                        <input type="number" min="0" id="childAbove5"placeholder=" Enter amount required">
+                    </div>
+                    <div class="form_field">
+                        <p>Adults </p>
+                        <input type="number" min="0" id="adults" placeholder=" Enter amount required">
+                    </div>
+                    <div class="form_field">
+                        <p>Single Rooms </p>
+                        <input type="number" min="0" id="singleRoom" placeholder=" Enter rooms required">
+                    </div>
+                    <div class="form_field">
+                        <p>Double Rooms </p>
+                        <input type="number" min="0" id="doubleRoom"placeholder=" Enter rooms required">
+                    </div>
+                    <div class="form_field">
+                        <p>Triple Rooms </p>
+                        <input type="number" min="0" id="tripleRoom"placeholder=" Enter rooms required">
+                    </div>
+                    <div class="form_field">
+                        <p>Extra Beds </p>
+                        <input type="number" min="0" id="extraBed"placeholder=" Enter beds required">
+                    </div>
+                    <div class="form_field">
+                        <p> View </p>
+                        <select name="select" id="dropdownbook">
+                            <option value="Pool View">  Pool View </option>
+                            <option value="Garden view"> Garden View  </option>
                         </select>
                     </div>
                     <div class="form_field">
-                        <p> How Many Rooms </p>
-                        <select name="select" id="#">
-                            <option value="1">  1 </option>
-                            <option value="2"> 2 </option>
-                            <option value="3"> 3 </option>
-                            <option value="4"> 4 </option>
-                        </select>
+                        <p> Wifi </p>
+                        <input type="radio" name="wifi" id="wifi">
+                    </div> 
+                    <div class="form_field">
+                        <p> Add Promo Code </p>
+                        <input type="text" placeholder="Enter Promo Code" id="promo">
                     </div>
-                    <button class="btn"> 
-                        Reserve 
+                    <button type="button" id="clearbtn" class="btn"> 
+                        Reset Booking 
+                    </button>
+                    <button type="button" id="bookBtn" class="btn"> 
+                        Book Rooms 
                     </button>
                 </form>
             </div>
@@ -98,60 +124,102 @@
                 <h2 class="heading"> Adventures </h2>
                 <h3 class="sub_heading"> Surfing </h3>
                 <p> Monday - Friday (9am - 7pm)</p>
-                <P> Weekdays and National Holiadys (9am - 5pm)</p>
                 <h3 class="sub_heading"> Diving </h3>
                 <p> Saturday & Sunday (9am - 4pm)</p>
+                <p>Starting at 5000 per local adult and 2000 for local child</p>
+                <p>Starting at 10000 per foreign adult and 5000 for foreign child</p>
+                <p> Guide provided for 1000 for adults and 500 for Children</p>
                 <h3 class="sub_heading"> Corals </h3>
                 <p> Saturday (3am - 7pm)</p>
                 <hr>
                 <h4 class="heading_phone"> Call Us For Further Information on 011234567</h4>
             </div>
             <div class="container_form">
-                <form>
+                <form id="advform">
                     <h2 class="form_heading"> Adventure Reservation</h2>
                     <div class="form_field">
                         <p> Name </p>
-                        <input type="text" placeholder="Enter Your Name">
+                        <input type="text" placeholder="Enter Your Name" id="advName" required>
                     </div>
                     <div class="form_field">
                         <p> Email </p>
-                        <input type="email" placeholder="Enter Your Email">
+                        <input type="email" placeholder="Enter Your Email" id="advEmail" required>
                     </div>
                     <div class="form_field">
                         <p> Adventure </p>
-                        <select name="select" id="#">
-                            <option value="1">  Surfing </option>
-                            <option value="2"> Diving  </option>
-                            <option value="3"> Corals </option>
+                        <select name="select" id="dropdown">
+                            <option value="Surfing">  Surfing </option>
+                            <option value="Diving"> Diving  </option>
+                            <option value="Corals"> Corals </option>
                         </select>
                     </div>
                     <div class="form_field">
                         <p> Adventure Date </p>
-                        <input type="date">
+                        <input type="date" id="advDate" required>
                     </div>
                     <div class="form_field">
-                        <p> Start Time </p>
-                        <input type="time">
+                        <p>  Local Adults </p>
+                        <input type="number" min="0" id="localAdults" placeholder=" Enter amount required">
                     </div>
                     <div class="form_field">
-                        <p> End Time </p>
-                        <input type="time">
+                        <p> Local Children  </p>
+                        <input type="number" min="0" id="localChildren" placeholder=" Enter amount required">
                     </div>
                     <div class="form_field">
-                        <p> Number of People </p>
-                        <select name="select" id="#">
-                            <option value="1">  1  </option>
-                            <option value="2"> 2   </option>
-                            <option value="3"> 3 </option>
-                            <option value="4"> 3+ </option>
-                        </select>
+                        <p> Foreign Adults  </p>
+                        <input type="number" min="0" id="foreignAdults" placeholder=" Enter amount required">
                     </div>
-                    <button class="btn"> 
-                        Reserve 
+                    <div class="form_field">
+                        <p> Foreign Children  </p>
+                        <input type="number" min="0" id="foreignChildren" placeholder=" Enter amount required">
+                    </div>
+                    <div class="form_field">
+                        <p> Hours   </p>
+                        <input type="number" min="1" id="hoursAdv" required placeholder=" Enter hours required">
+                    </div>
+                    <div class="form_field">
+                        <p> Adult Guides   </p>
+                        <input type="number" min="0" id="guideAdult" placeholder=" Enter hours required">
+                    </div>
+                    <div class="form_field">
+                        <p> Child Guides   </p>
+                        <input type="number" min="0" id="guideChild" placeholder=" Enter hours required">
+                    </div>
+                    <button type="button" class="btn" id="resetAdv" > 
+                        Reset Adventure 
+                    </button>
+                    <button type="button" class="btn" id="advbtn" > 
+                        Book Adventure 
                     </button>
                 </form>
             </div>
         </section>
+
+        <section class="bookingOutput">
+            <div class="boxOutput">
+                <h2> Current Booking </h2>
+                <p id="bookoutput"></p>
+            </div>
+            <div class="boxOutput">
+                <h2> Current Adventure </h2>
+                <p id="adventureoutput"></p>
+            </div>
+            <div class="boxOutput">
+                <h2> Loyalty point </h2>
+                <p id="loyalty"></p>
+            </div>
+            <div class="boxOutput">
+                <h2> Total Booking </h2>
+                <p id="totalbookadv"></p>
+            </div>
+            <div class="secondaryBtns">
+                <button type="button" id="loyalbtn" class="btn"> Check Loyalty </button>
+            </div>
+            <div class="secondaryBtns">
+                <button type="button" id="favbtn" class="btn"> Add to Favourites </button>
+            </div>
+        </section>
+        <br>
 
 <!--Footer-->
 

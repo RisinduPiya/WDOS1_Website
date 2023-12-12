@@ -703,6 +703,18 @@ tr:hover td {
     line-height: 1.6;
 }
 
+.container_time p {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+
+
+.sub_heading {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
 .heading {
     font-size: 35px;
     text-transform: uppercase;
@@ -727,7 +739,7 @@ tr:hover td {
 
 form{
     display: grid;
-    grid-row-gap: 20px;
+    grid-row-gap: 30px;
 }
 
 .form_field{
@@ -751,7 +763,53 @@ form p {
     border-radius: 100px;
     box-shadow: 10px 10px 10px;
     padding: 10px 20px;
+    transition: transform 0.3s;
 }
+
+.btn:hover {
+        transform: scale(1.05);
+
+}
+
+.boxOutput {
+    width: 45%;
+    margin: 10px;
+    padding: 15px;
+    border: 2px solid rgb(0, 40, 80);
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.bookingOutput {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 80%;
+    padding-left: 155px;
+}
+
+.boxOutput:hover {
+    transform: scale(1.05);
+}
+
+.bookingOutput h2 {
+    font-size: 20px;
+    color: rgb(0, 40, 80);
+}
+
+.secondaryBtns {
+    background-color: rgb(0, 40, 80);
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 100px;
+    transition: transform 0.3s;
+}
+
+.secondaryBtns:hover {
+    transform: scale(1.05);
+}
+
+
 
 @media(max-width :480px) {
     .hotel_container{
@@ -759,6 +817,14 @@ form p {
         flex-direction: column;
         margin-left:20px ;
         margin-right: 20px;
+    }
+
+    .bookingOutput {
+        padding-left: 40px;
+    }
+
+    .boxOutput {
+        width: 100%;
     }
 }
 
@@ -770,6 +836,11 @@ form p {
         margin-right: 20px;
     }
 }
+
+
+
+
+
 
 /* dining */
 
