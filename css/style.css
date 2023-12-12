@@ -29,7 +29,7 @@ nav {
 nav img{
     width: 150px;
     height: 50px;
-    transition: 0.3;
+    transition: 0.3s;
 }
 
 nav img:hover {
@@ -234,7 +234,7 @@ nav img:hover {
 }
 
 #beaches ul {
-    list-style-type: style circle; 
+    list-style-type: circle; 
     padding-left: 20px;
     color: rgb(0, 40, 80);
 }
@@ -290,7 +290,7 @@ footer{
 
 .footercontent p{
     margin: 0;
-    font-size: 14;
+    font-size: 14px;
     font-family: sans-serif;
 }
 
@@ -686,7 +686,7 @@ tr:hover td {
     box-shadow: 10px 20px 10px rgba(0, 0, 0, .1);
     display: grid;
     grid-template-columns: 40% 60%;
-    transition: transform 0.3 ease-in-out; 
+    transition: transform 0.3s ease-in-out; 
 }
 
 .hotel_container:hover {
@@ -747,9 +747,6 @@ form{
     display: flex;
 }
 
-input,select {
-    pad: 10px 15px;
-}
 
 form p {
     font-weight: bold;
@@ -836,7 +833,6 @@ form p {
         margin-right: 20px;
     }
 }
-
 
 
 
@@ -1014,7 +1010,7 @@ form p {
     box-shadow: 10px 20px 10px rgba(0, 0, 0, .1);
     display: grid;
     grid-template-columns: 40% 60%;
-    border: 3px solid rgb#17afba;
+    border: 3px solid ;
     border-radius: 30px;
 }
 
