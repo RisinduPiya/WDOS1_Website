@@ -215,9 +215,22 @@ function checkloyalty() {
     }
     else {
         console.log(loyaltyRooms);
-
+        loyaltyRoomsPoints = 0;
         loyaltyOutput.innerText = `You are not eligible  for any loyaly points !`
     }
+
+    // adding to local storage 
+    let loyaltyLocal = {
+        "Current Loyalty points" : (loyaltyRoomsPoints),
+    };
+
+    let loyaltyLocal_serial = JSON.stringify(loyaltyLocal);
+    console.log(loyaltyLocal);
+
+    localStorage.setItem("Loyalty Points - ", loyaltyLocal_serial);
+
+    alert(" Loyalty points have been recorded !");
+
 }
 
 //function for total booking cost 
@@ -236,6 +249,7 @@ function resetAdventure(){
     document.getElementById("advform").reset();
 }
 
+// Favorite function 
 function addFav() {
     let favbooking = {
         "1. Booking Name " : (bookingname.value),
@@ -252,23 +266,24 @@ function addFav() {
         "12. View" : (dropdownbook.value),
         "13. Promo Code" : (promo.value),
 
-        "1. Adventure Name " : (advName.value),
-        "2. Adventure Email " : (advEmail.value),
-        "3. Local adults  " : (localAdults.value),
-        "4. Local children  " : (localChildren.value),
-        "5. Foreign children  " : (foreignChildren.value),
-        "6. Foreign adults  " : (foreignAdults.value),
-        "7. Hours " : (hoursAdv.value),
-        "8. Adult Guides" : (guideAdult.value),
-        "9. Child Guides" : (guideChild.value),
-        "10. Adventure type" : (extraBed.value),
-        "11. Adventure Date" : (dropdown.value),
+        "14. Adventure Name " : (advName.value),
+        "15. Adventure Email " : (advEmail.value),
+        "16. Local adults  " : (localAdults.value),
+        "17. Local children  " : (localChildren.value),
+        "18. Foreign children  " : (foreignChildren.value),
+        "19. Foreign adults  " : (foreignAdults.value),
+        "20. Hours " : (hoursAdv.value),
+        "21. Adult Guides" : (guideAdult.value),
+        "22. Child Guides" : (guideChild.value),
+        "23. Adventure type" : (extraBed.value),
+        "24. Adventure Date" : (dropdown.value),
     };
 
     let favbooking_serial = JSON.stringify(favbooking);
     console.log(favbooking_serial);
 
     localStorage.setItem("Booking favourties - ", favbooking_serial);
+
     alert("Current Details have been added to Favourites !");
 }
 
